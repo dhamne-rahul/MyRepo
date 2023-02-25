@@ -23,7 +23,7 @@ public class BinarySearch {
             if(arr[mid]==target){
                 return true;
             }
-            if(target<mid){
+            if(target<arr[mid]){
                 //left
                 end=mid-1;
             }
