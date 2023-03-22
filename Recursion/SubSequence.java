@@ -2,26 +2,28 @@ package Recursion;
 import java.util.*;
 public class SubSequence {
     public static void main(String[] args) {
-        // String s="abc";
-        // ArrayList<String>ans=new ArrayList<>();
-        // System.out.println("rahul");
-        // System.out.println(ans);
-        // subseq1("",s,ans);
-        // System.out.println(ans);
-        // ArrayList<String>ans=subseqret("", s);
-        // System.out.println(ans);
-        int[] arr={1,2,3};
-        List<List<Integer>>ans=subset(arr);
-        for(List<Integer> i:ans)
-        {
-            for(Integer e:i)
-            {
-                System.out.print(e+" ");
-            }
-            System.out.println();
-        }
-
+        
     }
+    // public static void main(String[] args) {
+    //     String s="abc";
+    //     ArrayList<String>ans=new ArrayList<>();
+    //     System.out.println("rahul");
+    //     System.out.println(ans);
+    //     subseq1("",s,ans);
+    //     System.out.println(ans);
+    //     ArrayList<String>ans=subseqret("", s);
+    //     System.out.println(ans);
+    //     int[] arr={1,2,3};
+    //     List<List<Integer>>ans=subset(arr);
+    //     for(List<Integer> i:ans)
+    //     {
+    //         for(Integer e:i)
+    //         {
+    //             System.out.print(e+" ");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
     // public static void subseq(String p,String up)
     // {
     //     if(up.isEmpty())
@@ -33,6 +35,18 @@ public class SubSequence {
     //     subseq(p+ch, up.substring(1));
     //     subseq(p, up.substring(1));
     // }
+    public static int subseq(String p,String up)
+    {
+        if(up.isEmpty())
+        {
+            // System.out.println(p);
+            return 1;
+        }
+        char ch=up.charAt(0);
+        int a=subseq(p+ch, up.substring(1));
+        int b=subseq(p, up.substring(1));
+        return a+b;
+    }
     public static List<List<Integer>>subset(int[]arr)
     {
         List<List<Integer>>outer=new ArrayList<>();

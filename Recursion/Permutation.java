@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Permutation {
     public static void main(String[] args) {
-        String s="abcd";
+        String s="abc";
         // ArrayList<String>ans=permutation1("",s);
-        System.out.println(permutationCount("", s));
+        permutation("", s);
     }
     public static void permutation(String p,String up)
     {
